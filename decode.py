@@ -1,15 +1,28 @@
 def make_dictionary(message_file):
+    # Initialize an empty dictionary to store number-word pairs
     dictionary_data = {}
-    with open(message_file, 'r') as file:
-        for line in file:
-            number, word = line.split()
-            dictionary_data[int(number)] = word
+    try:
+        # Open the specified file in read mode
+        with open(message_file, 'r') as file:
+            for line in file:
+                number, word = line.split()
+                dictionary_data[int(number)] = word
+    except FileNotFoundError:
+        # Handle the case where the specified file is not found
+        print("File not found.")
+    except IOError:
+        # Handle other I/O errors
+        print("Error reading the file.")
+    except Exception as e:
+        # Handle unexpected errors
+        print("An unexpected error occurred:", str(e))
 
     return dictionary_data
 
 
 def process_decoder_keys(dictionary_data):
-
+    
+    # Determine the number of pairs in the dictionary
     num_pairs = len(dictionary_data)
     # Initialize the list of specific counts
     specific_counts = []
@@ -28,8 +41,10 @@ def process_decoder_keys(dictionary_data):
 
 # Main function /entry point
 def main():
-    print("This is the main function.")
-    dictionary_data = make_dictionary('message.txt')
+    # Prompting the user to input a file name
+    filename = input("Please enter the file name: ").strip()
+
+    dictionary_data = make_dictionary(filename)
     decoder_key_list = process_decoder_keys(dictionary_data);
     decoded_message = ""
 
