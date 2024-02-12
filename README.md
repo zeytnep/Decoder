@@ -21,15 +21,15 @@ The key to decoding the message is to use the words corresponding to the numbers
 Summary:
 This Python script performs the following tasks:
 
-1/Reading a file and creating a dictionary:
+1/Reading a file and creating a dictionary:<br>
 
 2/The make_dictionary function reads data from a specified file, where each line contains a pair of numbers and words separated by whitespace. It creates a dictionary where the numbers serve as keys and the corresponding words serve as values.
-Generating a list of specific counts:
+Generating a list of specific counts:<br>
 The process_decoder_keys function takes the created dictionary and generates a list of specific counts based on the number of pairs in the dictionary.
 
-3/Main function:
-~The main function serves as the entry point of the script.~
-•It prompts the user to input a file name.
-•It calls make_dictionary to create a dictionary from the provided file, process_decoder_keys to obtain a list of specific counts.
-•It generates a decoded message by iterating over the decoder key list and retrieving the corresponding words from the dictionary.
-•If the decoder key list is empty, it prints an error message (terminal).
+3/Main function:<br>
+The main function serves as the entry point of the script. <br>
+•It prompts the user to input a file name.<br>
+•It calls make_dictionary to create a dictionary from the provided file, process_decoder_keys to obtain a list of specific counts.<br>
+•It generates a decoded message by iterating over the decoder key list and retrieving the corresponding words from the dictionary.<br>
+•If the decoder key list is empty, it prints an error message (terminal).<br>
