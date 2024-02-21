@@ -1,4 +1,4 @@
-
+# Description
 This script reads an encoded message from a .txt file and returns its decoded version as a string.
 The function can process an input file with the following format: <br>
 3 love<br>
@@ -18,7 +18,7 @@ The key to decoding the message is to use the words corresponding to the numbers
 
 ---------------------------
 
-Summary:
+## Summary:
 This Python script performs the following tasks:
 
 1/Reading a file and creating a dictionary:<br>
